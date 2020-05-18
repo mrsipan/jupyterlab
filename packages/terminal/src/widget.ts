@@ -381,11 +381,12 @@ namespace Private {
    * The dark terminal theme.
    */
   export const darkTheme: ITerminal.IThemeObject = {
-    foreground: '#fff',
-    background: '#000',
-    cursor: '#fff',
+    foreground: '#e3e0d7',
+    background: '#242424',
+    cursor: '#ff8700'
+    cursorAccent: '#F5F5F5',
     cursorAccent: '#000',
-    selection: 'rgba(255, 255, 255, 0.3)'
+    selection: 'rgba(97, 97, 97, 0.3)'
   };
 
   /**

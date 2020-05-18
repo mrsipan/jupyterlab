@@ -9,6 +9,8 @@ import { IWidgetTracker, MainAreaWidget } from '@jupyterlab/apputils';
 
 import { Terminal } from '@jupyterlab/services';
 
+import { FontWeight } from 'xterm';
+
 /**
  * A class that tracks editor widgets.
  */
@@ -111,6 +113,16 @@ export namespace ITerminal {
      * Whether to auto-fit the terminal to its host element size.
      */
     autoFit?: boolean;
+
+   /**
+     * Font weight for bold in the termimal.
+     */
+    fontWeightBold: FontWeight;
+
+    /**
+     * The cursor style.
+     */
+    cursorStyle: 'block' | 'underline' | 'bar';
   }
 
   /**
@@ -124,10 +136,12 @@ export namespace ITerminal {
     scrollback: 1000,
     shutdownOnClose: false,
     cursorBlink: true,
-    initialCommand: '',
+    initialCommand: 'fish',
     screenReaderMode: false, // False by default, can cause scrollbar mouse interaction issues.
     pasteWithCtrlV: true,
-    autoFit: true
+    autoFit: true,
+    fontWeightBold: 'normal',
+    cursorStyle: 'block'
   };
 
   /**
